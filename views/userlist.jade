@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .container
+    .row
+      .panel.panel-danger
+        .panel-heading 普通注册用户列表
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th 姓名
+              th 详细
+              th 维修记录
+              th 升级权限
+          tbody
+            each item in users
+              tr(class="item-id-#{item._id}")
+                td #{item.name}
+                td: a.btn.btn-info.btn-xs(target="_blank", href="/user/#{item._id}") 查看
+                td: a.btn.btn-primary.btn-xs(target="_blank", href="/user/orderlist/#{item._id}") 查看
+                td
+                  button.btn.btn-danger.btn-xs.change(type="button", data-id="#{item._id}") 升级用户
+   script(src="/javascripts/admin.js")

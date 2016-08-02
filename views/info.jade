@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-6.col-md-offset-3
+        ul.list-group
+          li.list-group-item
+            span.badge #{totalD}
+            |     今日单数
+          li.list-group-item
+            span.badge #{totalLD}
+            |     昨日单数
+          li.list-group-item
+            span.badge #{totalLLD}
+            |     #{moment().subtract(2,'day').format('L')}单数
+          li.list-group-item
+            span.badge #{totalLLLD}
+            |     #{moment().subtract(3,'day').format('L')}单数
+          li.list-group-item
+            span.badge #{totalLLLLD}
+            |     #{moment().subtract(4,'day').format('L')}单数
+          li.list-group-item
+            span.badge #{totalW}
+            |     本周单数
+          li.list-group-item
+            span.badge #{totalM}
+            |     本月单数

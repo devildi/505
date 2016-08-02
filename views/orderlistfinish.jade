@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  .container
+    .row
+      .panel.panel-success
+        .panel-heading 已经完成的维修单
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th 完成时间
+              th 申请人名字
+              th 申请人电话
+              th 申请人部门
+              th 维修人
+              th 查看
+          tbody
+            each item in orders
+              tr(class="item-id-#{item._id}")
+                td #{moment(item.meta.updateAt).format('YYYY-MM-DD HH:mm:ss')}
+                td #{item.user.name}
+                td #{item.user.phonenumber}
+                td #{item.user.deparment}
+                td #{item.serviceguy}
+                td: a.btn.btn-info.btn-xs(target="_blank", href="/orderFinish/#{item._id}") 查看
+      ul.pagination
+        - for (var i = 0; i < totalPage; i++) {
+          - if (currentPage == (i + 1)) {
+              li.active
+                span #{currentPage}
+          - }
+          - else {
+              li
+                a(href='/finishedOrder?p=#{i}') #{i + 1}
+          - }
+        - }

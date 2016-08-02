@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  .container
+    .row
+      .panel.panel-info
+        .panel-heading 电脑耗材领取记录
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th 提交时间
+              th 名字
+              th 电话
+              th 申请物品
+              th 部门
+              th 处理
+          tbody
+            each item in orders
+              tr(class="item-id-#{item._id}")
+                td #{moment(item.meta.createAt).format('YYYY-MM-DD HH:mm:ss')}
+                td #{item.user.name}
+                td #{item.user.phonenumber}
+                td #{item.request}
+                td #{item.user.deparment}
+                if item.status == '未处理'
+                  td: a.btn.btn-danger.btn-xs.fin(type="button", data-id="#{item._id}") 点击处理
+                else
+                  td: a.btn.btn-primary.btn-xs.fin(type="button", disabled="disabled",data-id="#{item._id}") 已处理
+      ul.pagination
+        - for (var i = 0; i < totalPage; i++) {
+          - if (currentPage == (i + 1)) {
+              li.active
+                span #{currentPage}
+          - }
+          - else {
+              li
+                a(href='/suppliesShow?p=#{i}') #{i + 1}
+          - }
+        - }
+  script(src="/javascripts/admin.js")
+      

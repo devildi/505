@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .container(style="min-height: 100%;")
+    .row
+      .col-md-6.indexPost
+        div(method="POST", action="/user/order" onsubmit="return check" style="border:1px solid #E5E5E5;border-radius:5px;")
+          .modal-body
+            .form-group
+              label(for="signinPassword") 
+                h4 您的问题说明:
+              textarea.text.form-control(name="request", type="text" required rows="8")
+          .modal-footer
+            button.sub.btn.btn-lg.btn-danger(type="submit") 确定系统备份后提交
+      .col-md-6
+        .panel.panel-info.par
+          .panel-heading 问题1
+          .panel-body
+            我用过的编辑器不少，真不少～ 但却没有哪款让我特别心仪的，直到我遇到了 Sublime Text 2 ！如果说“神器”是我能给予一款软件最高的评价，那么我很乐意为它封上这么一个称号。它小巧绿色且速度非常快，跨平台支持Win/Mac/Linux，支持32与64位，支持各种流行编程语言的语法高亮、代码补全等，但它有着很多其他编辑器没有的超酷的特性，让它的好用达到了前所未有的程度……
+        .panel.panel-info.par
+          .panel-heading 问题2
+          .panel-body
+            我用过的编辑器不少，真不少～ 但却没有哪款让我特别心仪的，直到我遇到了 Sublime Text 2 ！如果说“神器”是我能给予一款软件最高的评价，那么我很乐意为它封上这么一个称号。它小巧绿色且速度非常快，跨平台支持Win/Mac/Linux，支持32与64位，支持各种流行编程语言的语法高亮、代码补全等，但它有着很多其他编辑器没有的超酷的特性，让它的好用达到了前所未有的程度……
+        .panel.panel-info.par
+          .panel-heading 问题3
+          .panel-body
+            我用过的编辑器不少，真不少～ 但却没有哪款让我特别心仪的，直到我遇到了 Sublime Text 2 ！如果说“神器”是我能给予一款软件最高的评价，那么我很乐意为它封上这么一个称号。它小巧绿色且速度非常快，跨平台支持Win/Mac/Linux，支持32与64位，支持各种流行编程语言的语法高亮、代码补全等，但它有着很多其他编辑器没有的超酷的特性，让它的好用达到了前所未有的程度……
+        .panel.panel-info.par
+          .panel-heading 问题4
+          .panel-body
+            我用过的编辑器不少，真不少～ 但却没有哪款让我特别心仪的，直到我遇到了 Sublime Text 2 ！如果说“神器”是我能给予一款软件最高的评价，那么我很乐意为它封上这么一个称号。它小巧绿色且速度非常快，跨平台支持Win/Mac/Linux，支持32与64位，支持各种流行编程语言的语法高亮、代码补全等，但它有着很多其他编辑器没有的超酷的特性，让它的好用达到了前所未有的程度……
+  script(src="/javascripts/check.js")

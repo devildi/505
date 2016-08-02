@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  if user
+    .container
+      .row
+        .panel.panel-danger
+          .panel-heading 注册用户
+          table.table.table-hover.table-bordered
+            thead
+              tr
+                th 姓名
+                th 密码
+                th 工号
+                th 部门
+                th 详细
+                th 维修记录
+            tbody
+              tr(class="item-id-#{user._id}")
+                td #{user.name}
+                td #{user.password}
+                td #{user.employeeID}
+                td #{user.deparment}
+                td: a.btn.btn-info.btn-xs(target="_blank", href="/user/#{user._id}") 查看
+                td: a.btn.btn-primary.btn-xs(target="_blank", href="/user/orderlist/#{user._id}") 查看
+  if orders
+    .container
+      .row
+        .panel.panel-success
+          .panel-heading 维修单
+          table.table.table-hover.table-bordered
+            thead
+              tr
+                th 完成时间
+                th 申请人名字
+                th 申请人电话
+                th 申请人部门
+                th 维修人
+                th 查看
+            tbody
+              each item in orders
+                tr(class="item-id-#{item._id}")
+                  td #{moment(item.meta.updateAt).format('YYYY-MM-DD HH:mm:ss')}
+                  td #{item.user.name}
+                  td #{item.user.phonenumber}
+                  td #{item.user.deparment}
+                  td #{item.serviceguy}
+                  td: a.btn.btn-info.btn-xs(target="_blank", href="/orderFinish/#{item._id}") 查看
+        ul.pagination
+          - for (var i = 0; i < totalPage; i++) {
+            - if (currentPage == (i + 1)) {
+                li.active
+                  span #{currentPage}
+            - }
+            - else {
+                li
+                  a(href='/finishedOrder?p=#{i}') #{i + 1}
+            - }
+          - }
+     script(src="/javascripts/admin.js")

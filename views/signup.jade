@@ -1,0 +1,124 @@
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(name="viewport", content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximun-scale=1")
+    title= title
+    link(type='text/css', rel='stylesheet', href='/stylesheets/select2.min.css')
+    link(type='text/css', rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/libs/jquery/dist/jquery.min.js")
+    script(src="/javascripts/select2.min.js")
+    script(src="/javascripts/index.js")
+  body
+    .cover
+      canvas#canvas
+      //-img.img(src="images/bg.jpg")
+    .wel_top1
+      div
+        a.wel_top1_left(href='/', style='color:#FFF') LRTV
+      div
+        a.wel_top1_right(href='/signin', style='color:#fff') 登陆
+    .wel_top2
+      h1.logo 
+    .wel_top4
+      p LRTV运维系统 | TEL：23186870
+    div
+      form.sign_form(method="POST", action="/user/signup")
+        .group-inputs
+          .form_top.input-wrapper
+            input(type='text', name="name", placeholder='姓名' ,required)
+          .input-wrapper
+            input(type='password', name="password", placeholder='密码' ,required)
+          .input-wrapper
+            input(type='string', name="employeeID", placeholder='工号' ,required)
+          .input-wrapper
+            select.js-example-basic-single(required)
+              option
+              option(value='1') 1F
+              option(value='2') 2F
+              option(value='3') 3F
+              option(value='4') 4F
+              option(value='5') 5F
+              option(value='6') 6F
+              option(value='7') 7F
+              option(value='8') 8F
+              option(value='9') 9F
+              option(value='10') 10F
+              option(value='11') 11F
+              option(value='12') 12F
+              option(value='13') 13F
+              option(value='14') 14F
+              option(value='15') 15F
+              option(value='16') 16F
+              option(value='17') 17F
+              option(value='18') 18F
+              option(value='19') 19F
+              option(value='20') 20F
+              option(value='21') 21F
+              option(value='22') 22F
+              option(value='23') 23F
+              option(value='24') 24F
+              option(value='25') 25F
+              option(value='26') 26F
+              option(value='27') 27F
+              option(value='28') 28F
+              option(value='29') 29F
+              option(value='30') 30F
+              option(value='31') 31F
+              option(value='32') 32F
+              option(value='Q1') 裙1F（大厅）
+              option(value='Q2') 裙2F
+              option(value='Q3') 裙3F
+          .input-wrapper
+            select.js-example-basic-single1(required)
+              option
+              option(value='《瞭望评辨天下》编辑部') 《瞭望评辨天下》编辑部
+              option(value='安全保卫部') 安全保卫部
+              option(value='办公室') 办公室
+              option(value='北方频道') 北方频道
+              option(value='播音员主持人协会') 播音员主持人协会
+              option(value='财务资产管理部') 财务资产管理部
+              option(value='传播覆盖部') 传播覆盖部
+              option(value='地面节目采购部') 地面节目采购部
+              option(value='都市频道') 都市频道
+              option(value='法务审计和广告监管中心') 法务审计和广告监管中心
+              option(value='工会会') 工会
+              option(value='国际交流部') 国际交流部
+              option(value='后勤服务部') 后勤服务部
+              option(value='机关党委') 机关党委
+              option(value='集团综合管理办公室') 集团综合管理办公室
+              option(value='纪录片制作部') 纪录片制作部
+              option(value='纪委') 纪委
+              option(value='技术中心') 技术中心
+              option(value='交通广播') 交通广播
+              option(value='经济广播') 经济广播
+              option(value='经营管理中心') 经营管理中心
+              option(value='老干部工作部') 老干部工作部
+              option(value='宜佳购物频道') 宜佳购物频道
+              option(value='媒资（版权）中心') 媒资（版权）中心
+              option(value='瓢虫台') 瓢虫台
+              option(value='人力资源管理中心') 人力资源管理中心
+              option(value='生活频道') 生活频道
+              option(value='团委') 团委
+              option(value='网络数据部') 网络数据部
+              option(value='卫星频道') 卫星频道
+              option(value='文艺广播') 文艺广播
+              option(value='文艺中心') 文艺中心
+              option(value='乡村广播') 乡村广播
+              option(value='新媒体发展管理中心') 新媒体发展管理中心
+              option(value='新闻中心') 新闻中心
+              option(value='影视剧频道') 影视剧频道
+              option(value='战略发展研究中心') 战略发展研究中心
+              option(value='综合广播') 综合广播
+              option(value='总编室') 总编室
+          .input-wrapper
+            input(type='text', name="phonenumber", placeholder='联系电话' ,required)
+          .input-wrapper
+            input(type='text', name="housenumber", placeholder='门牌号' ,required)
+          input#floor(type="hidden", name="floor", value="")
+          input#deparment(type="hidden", name="deparment", value="")
+        input.sign_form_submit(type='submit', value='注册')
+    .footer
+      span @2016 网络数据部
+      span.dot .
+      span 有问题请联系:
+      span 吴迪 | TEL:23186872

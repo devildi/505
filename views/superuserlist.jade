@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .container
+    .row
+      .panel.panel-danger
+        .panel-heading 高级注册用户列表
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th 姓名
+              th 工号
+              th 部门
+              th 详细
+          tbody
+            each item in users
+              tr(class="item-id-#{item._id}")
+                td #{item.name}
+                td #{item.employeeID}
+                td #{item.deparment}
+                td: a.btn.btn-info.btn-xs(target="_blank", href="/user/#{item._id}") 查看
+                

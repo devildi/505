@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-6
+        .dl-horizontal
+          dt 问&nbsp题&nbsp说&nbsp明:
+          dd= order.request
+          dt 申请人姓名:
+          dd= user.name
+          dt 申请人部门:
+          dd= user.deparment
+          dt 申请人门牌:
+          dd= user.housenumber
+          dt 申请人电话:
+          dd= user.phonenumber
+      .col-md-6
+        form(method="POST", action="/order/finish" style="border:1px solid #E5E5E5;border-radius:5px;margin-top:16px;")
+          .modal-body
+            .form-group
+              label(for="ip") 固定资产号
+              input#ip.form-control(name="ip", type="text" required value=user.ip)
+            .form-group
+              label(for="mac") MAC
+              input#mac.form-control(name="mac", type="text" required value=user.mac)
+            .form-group
+              label(for="response") 问题具体描述
+              textarea.form-control(name="response", type="text" required)
+            input(type="hidden", name="orderId", value="#{order._id}")
+            input(type="hidden", name="userId", value="#{user._id}")
+          .modal-footer
+            button.btn.btn-danger.btn-lg(type="submit") 完成此单

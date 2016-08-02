@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-4.col-md-offset-4.col-xs-6.col-xs-offset-3
+        .dl-horizontal
+          dt 申请人姓名:
+          dd= user.name
+          dt 申请人部门:
+          dd= user.deparment
+          dt 申请人门牌:
+          dd= user.housenumber
+          dt 申请人电话:
+          dd= user.phonenumber
+          dt 申请提交时间:
+          dd= moment(order.meta.createAt).format('YYYY-MM-DD HH:mm:ss')
+          dt 维修完成时间:
+          dd= moment(order.meta.updateAt).format('YYYY-MM-DD HH:mm:ss')
+          dt 问题说明:
+          dd= order.request
+          dt 维修说明:
+          dd= order.response
+          dt 主机固定资产号:
+          dd= user.ip
+          dt 主机MAC:
+          dd= user.mac
+          dt 维修人:
+          dd= order.serviceguy

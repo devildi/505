@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .container
+    .row
+      .panel.panel-primary
+        .panel-heading 正在进行中的维修单
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th 提交时间
+              th 名字
+              th 电话
+              th 楼层
+              th 部门
+              th 查看
+          tbody
+            each item in orders
+              tr(class="item-id-#{item._id}")
+                td #{moment(item.meta.createAt).format('YYYY-MM-DD HH:mm:ss')}
+                td #{item.user.name}
+                td #{item.user.phonenumber}
+                td #{item.user.floor}
+                td #{item.user.deparment}
+                td: a.btn.btn-info.btn-xs(href="/order/#{item._id}") 查看
+      

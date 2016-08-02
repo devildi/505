@@ -1,0 +1,23 @@
+mongodb
+	启动：./bin/mongod -f conf/mongod.conf (--repair) ./mongod --dbpath ../505/
+	链接：./bin/mongo 127.0.0.1:27017
+	> show dbs
+	> use test
+	> show collections
+	> db.cats.find()
+	 db.dropDatabase();
+端口	查看端口：netstat -tunlp
+	查看程序端口：pgrep firefox
+	kill进程：kill -s 9 PORT
+node	DEBUG=505:* npm start
+
+网络问题：
+1：都上不去网 ping防火墙
+
+2:本机防火墙已经关闭
+
+
+
+db.orders.find({meta.updateAt:{"$gte": new Date('2016-04-19'),"$lt":new Date('2016-04-25')}})
+
+db.users.update( { "employeeID" : "002180" } , { $set : { "role" : 50} } );

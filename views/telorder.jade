@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .container
+    .row
+       .col-md-6.col-md-offset-3
+        form(method="POST", action="/telorder/finish" style="border:1px solid #E5E5E5;border-radius:5px;margin-top:16px;")
+          .modal-body
+            .form-group
+              label(for="telnumber") 电话
+              input.form-control(name="telnumber", type="String" required)
+            .form-group
+              label(for="request") 问题描述
+              input.form-control(name="request", type="text" required)
+            .form-group
+              label(for="response") 处理过程
+              textarea.form-control(name="response", type="text" required)
+          .modal-footer
+            button.btn.btn-danger.btn-lg(type="submit") 完成此单

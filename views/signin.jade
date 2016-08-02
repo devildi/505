@@ -1,0 +1,34 @@
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    title= title
+    link(href="/libs/bootstrap/dist/css/bootstrap.min.css", rel="stylesheet")
+    link(type='text/css', rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/index.js")
+  body
+    //-.cover
+        //-canvas#canvas
+    img.img(src="images/bg.jpg")
+    .wel_top1
+      div
+        a.wel_top1_left(href='/') LRTV
+      div
+        a.wel_top1_right(href='/signup') 注册
+    .wel_top2
+      h1.logo 
+    .wel_top4
+      p LRTV运维系统 | TEL：23186870
+    div
+      form.sign_form(method="POST", action="/user/signin")
+        .group-inputs
+          .input-wrapper
+            input(type='string', name="employeeID", placeholder='工号' ,required)
+          .input-wrapper
+            input(type='password', name="password", placeholder='密码' ,required)
+        input.sign_form_submit(type='submit', value='登录')
+    .footer
+      span @2016 网络数据部
+      span.dot .
+      span 有问题请联系:
+      span 吴迪 | TEL:23186872
