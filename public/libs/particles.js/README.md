@@ -2,7 +2,19 @@
 
 ### A lightweight JavaScript library for creating particles.
 
+------------------------------
+### `Demo / Generator`
+
+<a href="http://vincentgarreau.com/particles.js" target="_blank"><img src="https://dl.dropboxusercontent.com/u/19580440/particlesjs-assets/github-screen.jpg" alt="particles.js generator" /></a>
+
+Configure, export, and share your particles.js configuration on CodePen: <br />
+http://vincentgarreau.com/particles.js
+
+CodePen demo: <br />
+http://codepen.io/VincentGarreau/pen/pnlso
+
 -------------------------------
+### `Usage`
 
 Load particles.js and configure the particles:
 
@@ -17,7 +29,7 @@ Load particles.js and configure the particles:
 ```javascript
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', 'assets/particles.json', function() {
-  console.log('callback - particles-js config loaded');
+  console.log('callback - particles.js config loaded');
 });
 ```
 
@@ -200,6 +212,11 @@ key | option type / notes | example
 -------------------------------
 
 ### `Packages install`
+
+##### ***npm***
+```
+npm install particles.js
+```
 
 ##### ***Bower***
 ```

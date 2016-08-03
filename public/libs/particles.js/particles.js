@@ -1471,7 +1471,7 @@ function isInArray(value, array) {
 
 
 /* ---------- particles.js functions - start ------------ */
-
+window.onload = function(){
 window.pJSDom = [];
 
 window.particlesJS = function(tag_id, params){
@@ -1539,3 +1539,8 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
   xhr.send();
 
 };
+particlesJS.load('particles-js', 'libs/particles.js/particles.json', function(){
+  console.log('callback - particles.js config loaded')
+})
+} //window.onload finish
+

@@ -5,3 +5,11 @@ link(type='text/css', rel='stylesheet', href='/libs/sweetalert/dist/sweetalert.c
 script(src="/libs/jquery/dist/jquery.min.js")
 script(src="/libs/bootstrap/dist/js/bootstrap.min.js")
 script(src="/libs/sweetalert/dist/sweetalert.min.js")
+script.
+	$(function() {
+	var BrowerH = $(window).height()
+	var PageH = $(document).height()
+	if( BrowerH < PageH) {
+	$('.footer').css('position', 'static')
+	}
+	})

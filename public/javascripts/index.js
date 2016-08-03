@@ -1,6 +1,11 @@
 $(document).ready(function() {
-
-
+  
+  var BrowerH = $(window).height()
+  var PageH = $(document).height()
+  if( BrowerH < PageH) {
+  $('.footer').css('position', 'static')
+  }
+ 
   $(".js-example-basic-single").select2({
   	minimumResultsForSearch: Infinity,
   	placeholder: "楼层",
@@ -11,7 +16,6 @@ $(document).ready(function() {
 						    })
   		$('#floor').val(args)
   })
-
 
   $(".js-example-basic-single1").select2({
   	minimumResultsForSearch: Infinity,
