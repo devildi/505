@@ -4,14 +4,14 @@
       "value": 20,
       "density": {
         "enable": true,
-        "value_area": 800
+        "value_area": 1000
       }
     },
     "color": {
-      "value": "#b61924"
+      "value": "#CCCCCC"
     },
     "shape": {
-      "type": "polygon",
+      "type": "circle",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -54,7 +54,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 2,
       "direction": "none",
       "random": false,
       "straight": false,
