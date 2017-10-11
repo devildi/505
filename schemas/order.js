@@ -3,27 +3,13 @@ var Schema = mongoose.Schema
 var ObjectId = Schema.Types.ObjectId
 
 var OrderSchema = new Schema({
-	user:{
-		type: ObjectId,
-    	ref: 'User'
-	},
+	user:{type: ObjectId,ref: 'User'},
 	request: String,
-	completedorNot:{
-		type: Number,
-    	default: 0
-	},
+	completedorNot: {type: Number,default: 0},
 	serviceguy: String,
 	response: String,
-	meta: {
-	    createAt: {
-	      type: Date,
-	      default: Date.now()
-	    },
-	    updateAt: {
-	      type: Date,
-	      default: Date.now()
-	    }
-	}
+	meta: {createAt: {type: Date,default: Date.now()},
+	    updateAt: {type: Date,default: Date.now()}}
 })
 
 OrderSchema.pre('save', function(next) {

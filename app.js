@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash = require('connect-flash');
 
-var dbUrl = 'mongodb://localhost/505'
+var dbUrl = 'mongodb://localhost/wulingwu'
 
 var session = require('express-session')
 var MongoStore = require('connect-mongo')(session)

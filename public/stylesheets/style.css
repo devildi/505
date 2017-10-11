@@ -67,7 +67,6 @@ input,textarea{
 	width:300px;
 	margin: 0 auto;
 }
-
 .group-inputs{
 	border: 1px solid #d5d5d5;
     border-radius: 3px;
@@ -90,12 +89,12 @@ input{
 	color: #fff;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 	cursor: pointer;
-    display: block;
-    margin-top: 18px;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
+  display: block;
+  margin-top: 18px;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 .sign_form_submit:hover{
 	 background-color:rgba(7,103,199,0.7);
@@ -114,14 +113,14 @@ input{
 }
 .footer{
 	position: absolute;
-    font-size: 12px;
-    line-height: 20px;
-    text-align: center;
-    height: 20px;
-    left:0;
-    right: 0;
-    bottom: 0;
-    width:100%;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  height: 20px;
+  left:0;
+  right: 0;
+  bottom: 0;
+  width:100%;
 }
 .footer span, .footer a {
     color:#000;

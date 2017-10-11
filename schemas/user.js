@@ -5,38 +5,18 @@ var ObjectId = Schema.Types.ObjectId
 var UserSchema = new mongoose.Schema({
   name: String,
   password: String,
-  employeeID:{
-    unique: true,
-    type: String
-  },
+  employeeID:{unique: true,type: String},
   floor: String,
   housenumber: Number,
   deparment: String,
   ip: String,
   mac: String,
   phonenumber: String,
-  role: {
-    type: Number,
-    default: 0
-  },
-  BeFixed:[{
-    type: ObjectId,
-    ref: 'Order'
-  }],
-  HasFixed:[{
-    type: ObjectId,
-    ref: 'Order'
-  }],
-  meta: {
-    createAt: {
-      type: Date,
-      default: Date.now()
-    },
-    updateAt: {
-      type: Date,
-      default: Date.now()
-    }
-  }
+  role: {type: Number,default: 0},
+  BeFixed:[{type: ObjectId,ref: 'Order'}],
+  HasFixed:[{type: ObjectId,ref: 'Order'}],
+  meta: { createAt: {type: Date,default: Date.now()},
+          updateAt: {type: Date,default: Date.now()}}
 })
 UserSchema.pre('save',function(next){
   this.meta.createAt = Date.now()
